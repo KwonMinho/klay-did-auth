@@ -1,4 +1,4 @@
-# klaytn-did-client
+# klay-did-client
 
 해당 모듈은 자바스크립트 기반의 클레이튼 DID 레지스트리의 클라이언트 모듈이다.
 
@@ -102,6 +102,7 @@ signature 값은 { signature: 0x(hex string), VRS obj }인 object가 반환
 VRS obj는 type이 `EcdsaSecp256k1RecoveryMethod2020` 일 때만 null 아니고, {v: int, r: string, s: string}으로 구성된다.
 
 <br/>
+
 ### verification
 
 ```js
@@ -117,6 +118,7 @@ data는 signature에 사용된 data을 의미한다. (string 타입)
 public key는 did document의 public key list에 있는 public key object{id, keyType, pubKeyData}이다.
 
 <br/>
+
 ## Delegate
 
 ```js
@@ -177,6 +179,7 @@ did, type, publicKey, controller는 `addPubKey`와 동일하다.
 
 
 <br/>
+
 ### service
 ```js
 await klayDID.addService(did, scvId, scvType, scvEndPoint)
@@ -205,6 +208,7 @@ signature에 사용되는 데이터 값은 [여기](#signature-data)에 설명�
 did, scvId, scvType, scvEndPoint는 `addService`와 동일하다.
 
 <br/>
+
 ## Read Utils
 
 ### read document
@@ -325,6 +329,7 @@ caver-js 모듈을 사용해서 직접 `didLedger의 deactivatedDom(did)` 실행
 
 
 <br/>
+
 ## Signature Data
 
 `addPubKeyBySigner`나 `addServiceBySinger`에서 사용되어지는 signature의 data는 아래와 같이 구성된다.
@@ -357,9 +362,11 @@ did는 document의 주체를 의미한다.
 
 
 <br/>
+
 ## Submodule Auth
 
 <br/>
+
 ### login
 
 ```js
